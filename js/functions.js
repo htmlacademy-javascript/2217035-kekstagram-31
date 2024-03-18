@@ -37,3 +37,5 @@ const IsMeetingInWorkTime = (workStart, workEnd, meetingStart, duration) => {
 
   return meetingStart + duration <= workEnd && meetingStart >= workStart;
 };
+
+IsMeetingInWorkTime();
