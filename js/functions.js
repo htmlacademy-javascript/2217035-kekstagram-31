@@ -21,21 +21,21 @@
 
 // isPalindrome('Леша на полке клопа нашел ');
 
-const convertTimeToNumber = (time) => {
-  const [hours, minutes] = time.split(":");
+// const convertTimeToNumber = (time) => {
+//   const [hours, minutes] = time.split(':');
 
-  const hoursInt = parseInt(hours, 10);
-  const minutesInt = parseInt(minutes, 10);
+//   const hoursInt = parseInt(hours, 10);
+//   const minutesInt = parseInt(minutes, 10);
 
-  return hoursInt * 60 + minutesInt;
-};
+//   return hoursInt * 60 + minutesInt;
+// };
 
-const IsMeetingInWorkTime = (workStart, workEnd, meetingStart, duration) => {
-  workStart = convertTimeToNumber(workStart);
-  workEnd = convertTimeToNumber(workEnd);
-  meetingStart = convertTimeToNumber(meetingStart);
+// const IsMeetingInWorkTime = (workStart, workEnd, meetingStart, duration) => {
+//   workStart = convertTimeToNumber(workStart);
+//   workEnd = convertTimeToNumber(workEnd);
+//   meetingStart = convertTimeToNumber(meetingStart);
 
-  return meetingStart + duration <= workEnd && meetingStart >= workStart;
-};
+//   return meetingStart + duration <= workEnd && meetingStart >= workStart;
+// };
 
-IsMeetingInWorkTime();
+// IsMeetingInWorkTime();
