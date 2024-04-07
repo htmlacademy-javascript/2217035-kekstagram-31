@@ -1,11 +1,8 @@
-import createPost from './post.js';
-const ARRAY_WITH_PHOTOS = Array.from({ length: 25 }, createPost);
+import ARRAY_WITH_PHOTOS from './post.js';
 
 const blockPictures = document.querySelector('.pictures');
-
 const templatePicture = document.querySelector('#picture').content;
 const itemPicture = templatePicture.querySelector('.picture');
-
 const documentFragment = document.createDocumentFragment();
 
 ARRAY_WITH_PHOTOS.forEach((element) => {
@@ -18,6 +15,7 @@ ARRAY_WITH_PHOTOS.forEach((element) => {
   photoUser.alt = element.description;
   photoLikes.textContent = element.likes;
   photoComments.textContent = element.comments.idComments;
+  photoUser.id = element.id;
 
   documentFragment.appendChild(cloneTemplate);
 });
