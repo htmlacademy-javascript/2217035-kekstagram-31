@@ -3,7 +3,7 @@ import { getRandomInteger, createRandomIdFromRangeGenerator } from './util.js';
 
 const createPost = (_, index) => {
   const comentId = createRandomIdFromRangeGenerator(1, 1000);
-  const commentsCounter = getRandomInteger (1, 7);
+  const commentsCounter = getRandomInteger(10, 17);
   const commentsArr = [];
   for (let i = 0; i <= commentsCounter; i++) {
     const comment = {
@@ -17,11 +17,14 @@ const createPost = (_, index) => {
   const post = {
     id: index + 1,
     url: `photos/${index + 1}.jpg`,
-    description: DESCRIPTION_PHOTOS[getRandomInteger(0, DESCRIPTION_PHOTOS.length - 1)],
+    description:
+      DESCRIPTION_PHOTOS[getRandomInteger(0, DESCRIPTION_PHOTOS.length - 1)],
     likes: getRandomInteger(15, 200),
     comments: commentsArr,
   };
   return post;
 };
 
-export default createPost;
+const ARRAY_WITH_PHOTOS = Array.from({ length: 25 }, createPost);
+
+export default ARRAY_WITH_PHOTOS;
